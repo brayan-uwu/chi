@@ -1,8 +1,8 @@
- class Sucursal{
-    ubicacion;
-    numero_d;
-    tamanio;
-    tipo;
-    
-    
- }
+class Sucursaal {
+  nombre;
+  ubicacion;
+  constructor(name, u) {
+      this.nombre = name;
+      this.ubicacion = u;
+  }
+}
