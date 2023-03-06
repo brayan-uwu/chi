@@ -8,6 +8,22 @@ var co = [];
 var ta = [];
 
 
+function nombredelasucursa() {
+    let nam = document.getElementById('nam');
+    let u = document.getElementById('u');
+    let s1 = new Sucursaal(nam.value, u.value);
+
+
+
+    localStorage.setItem(suc, JSON.stringify(suc));
+
+    sessionStorage.setItem(ubi, JSON.stringify(ubi));
+
+
+    alert("se saguardo sucursal");
+    document.getElementById('nam').value = ' '
+    document.getElementById('u').value = ' '
+}
 
 function ingresaempleado() {
     let empleadoo = document.getElementById('empleadoo');
@@ -36,11 +52,16 @@ function nombredelaropa() {
     mar.push(r1);
     localStorage.setItem(suc, JSON.stringify(suc));
 
-    sessionStorage.setItem(ubi, JSON.stringify(ubi));
+    localStorage.setItem(ubi, JSON.stringify(ubi));
     localStorage.setItem(mar, JSON.stringify(mar));
     localStorage.setItem(co, JSON.stringify(co));
     localStorage.setItem(ta, JSON.stringify(ta));
-
+    var arrayg = localStorage.getItem('ubi');
+    var arrayg = localStorage.getItem('suc');
+    var arrayg = localStorage.getItem('mar');
+    var arrayg = localStorage.getItem('co');
+    var arrayg = localStorage.getItem('ta');
+    var ubi = JSON.parse(arrayg);
     console.log(nam, u, mar, co, ta, );
     alert("se aguardo la ropa");
     document.getElementById('tal').value = ' '
@@ -48,4 +69,7 @@ function nombredelaropa() {
     document.getElementById('cortes').value = ' '
     document.getElementById('nam').value = ' '
     document.getElementById('u').value = ' '
+
+
+
 }
